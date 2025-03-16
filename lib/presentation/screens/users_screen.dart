@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
-import '../cubits/users_cubit.dart';
+import '../cubits/user/users_cubit.dart';
 import '../widgets/common/error_widget.dart';
 import '../widgets/common/loading_indicator.dart';
 import '../widgets/common/no_more_widget.dart';
@@ -13,6 +13,7 @@ class UsersScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(title: const Text('Users')),
       body: BlocBuilder<UsersCubit, UsersState>(
         builder: (context, state) {
@@ -27,9 +28,9 @@ class UsersScreen extends StatelessWidget {
           }
 
           List<dynamic> users = [];
-          if (state is UsersLoaded)
+          if (state is UsersLoaded) {
             users = state.users;
-          else if (state is UsersLoadingMore)
+          } else if (state is UsersLoadingMore)
             users = state.users;
           else if (state is UsersNoMoreData)
             users = state.users;

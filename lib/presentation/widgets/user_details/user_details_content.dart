@@ -21,12 +21,16 @@ class UserDetailsContent extends StatelessWidget {
       padding: EdgeInsets.all(4.w),
       child: Column(
         children: [
-          CircleAvatar(
-            radius: 10.w,
-            backgroundImage: NetworkImage(user.avatar),
+          Hero(
+            tag: 'user-avatar-${user.id}',
+            child: CircleAvatar(
+              radius: 10.w,
+              backgroundImage: NetworkImage(user.avatar),
+            ),
           ),
           SizedBox(height: 3.h),
           Card(
+            color: Colors.grey[100],
             elevation: 4,
             child: Padding(
               padding: EdgeInsets.all(4.w),
@@ -39,25 +43,6 @@ class UserDetailsContent extends StatelessWidget {
                   DetailRow(label: 'Last Name', value: user.lastName),
                   Divider(height: 2.h),
                   DetailRow(label: 'Email', value: user.email),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(height: 3.h),
-          Card(
-            elevation: 4,
-            child: Padding(
-              padding: EdgeInsets.all(4.w),
-              child: Column(
-                children: [
-                  Text(
-                    'Support Information',
-                    style: AppStyles.subtitleStyle,
-                  ),
-                  SizedBox(height: 2.h),
-                  DetailRow(label: 'URL', value: support.url),
-                  Divider(height: 2.h),
-                  DetailRow(label: 'Text', value: support.text),
                 ],
               ),
             ),

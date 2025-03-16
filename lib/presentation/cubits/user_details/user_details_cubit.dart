@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import '../../data/repositories/user_repository.dart';
-import '../../data/models/user_model.dart';
-import '../../data/models/support_model.dart';
+import '../../../data/repositories/user_repository.dart';
+import '../../../data/models/user_model.dart';
+import '../../../data/models/support_model.dart';
 
 part 'user_details_state.dart';
 

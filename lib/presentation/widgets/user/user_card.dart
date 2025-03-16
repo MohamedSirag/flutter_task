@@ -22,8 +22,13 @@ class UserCard extends StatelessWidget {
           padding: EdgeInsets.all(3.w),
           child: Row(
             children: [
-              CircleAvatar(
-                  radius: 5.w, backgroundImage: NetworkImage(user.avatar)),
+              Hero(
+                tag: 'user-avatar-${user.id}',
+                child: CircleAvatar(
+                    backgroundColor: Colors.blueAccent,
+                    radius: 5.w,
+                    backgroundImage: NetworkImage(user.avatar)),
+              ),
               SizedBox(width: 3.w),
               Expanded(
                 child: Column(

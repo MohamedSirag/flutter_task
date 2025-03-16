@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'core/constants/api_constants.dart';
 import 'data/repositories/user_repository.dart';
-import 'presentation/cubits/user_details_cubit.dart';
-import 'presentation/cubits/users_cubit.dart';
+import 'presentation/cubits/user_details/user_details_cubit.dart';
+import 'presentation/cubits/user/users_cubit.dart';
 import 'presentation/screens/splash_screen.dart';
 import 'presentation/screens/users_screen.dart';
 import 'presentation/screens/user_details_screen.dart';

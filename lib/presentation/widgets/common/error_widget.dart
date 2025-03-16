@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
-import '../../cubits/users_cubit.dart';
+import '../../cubits/user/users_cubit.dart';
 import '../../../core/constants/styles.dart';
 
 class AppErrorWidget extends StatelessWidget {

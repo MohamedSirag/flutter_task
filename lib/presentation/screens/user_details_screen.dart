@@ -4,11 +4,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
 import '../../data/models/user_model.dart';
 import '../../data/models/support_model.dart';
-import '../cubits/user_details_cubit.dart';
+import '../cubits/user_details/user_details_cubit.dart';
 import '../widgets/common/loading_indicator.dart';
 import '../widgets/common/error_widget.dart';
 import '../../core/constants/styles.dart';
-import '../widgets/user/user_details_content.dart';
+import '../widgets/user_details/user_details_content.dart';
 
 class UserDetailsScreen extends StatelessWidget {
   const UserDetailsScreen({super.key});
@@ -16,6 +16,7 @@ class UserDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(title: const Text('User Details')),
       body: BlocBuilder<UserDetailsCubit, UserDetailsState>(
         builder: (context, state) {
